@@ -1,4 +1,5 @@
 ---
+layout: pape
 title:  "Markdown examples"
 categories: example
 ---

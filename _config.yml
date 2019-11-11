@@ -1,18 +1,18 @@
-title: "Blog Title"
-author: "Blog Author"
-description: "Really cool blog about ... something"
+title: "Kurt's Blog"
+author: "Kurt Zhao"
+description: "Really cool blog about reinforcement learning"
 permalink: /:title/
 lang: "en"
 
-show_footer: false           # show the "previous" and "next" links at the end of each post
+show_footer: true            # show the "previous" and "next" links at the end of each post
 dark_theme: false            # use the dark mode as default
 dark_header: true            # keep the header dark
-dark_footer: false           # keep the footer dark
+dark_footer: true            # keep the footer dark
 # style: minimal             # use a simpler style inspired by the minima theme
 
 navigation:                  # site navigation in the header
-  - README.md
-  - Github: "http://github.com/niklasbuschmann/contrast"
+  - about.md
+  - Github: "https://github.com/kurtwzhao"
 
 #icons:                      # icons in the header, see http://fontawesome.com/icons
 #  envelope: "mailto:niklasbuschmann@users.noreply.github.com"

@@ -1,4 +1,5 @@
 ---
+layout: post
 title:  "Advanced"
 date: 2019-11-11
 ---

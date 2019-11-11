@@ -1,7 +1,6 @@
 ---
-title:  "Advanced examples"
-categories: example
-mathjax: true
+title:  "Advanced"
+date: 2019-11-11
 ---
 
 ## MathJax

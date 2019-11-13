@@ -7,7 +7,7 @@ It is natural to understand MDP by proceeding in the order of **Markov Process (
 
 Markov process is a stochastic process that satisfies the Markov property. We make two additional assumptions that are very common in the reinforcement learning (RL) setting:
 
-* *Finite state space:* we denote the state space by $$\mathcal(S)=\{s_1,s_2,\dots,s_n\}$$, therefore, $$\|\mathcal(S)\|=n$$
+* *Finite state space:* we denote the state space by $\mathcal(S)=\{s_1,s_2,\dots,s_n\}$, therefore, $$||\mathcal(S)||=n$$
 * *Stationary transition probabilities:* the transition probabilities are time independent. Mathematically, this means:
 
 $$P(S_1=s'|S_0=s)=P(S_t=s'|S_{t-1}=s)$$, $$\forall s, s'\\mathcal{S}$$, $$\forall t=1, 2, \dots$$

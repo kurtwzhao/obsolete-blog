@@ -10,13 +10,10 @@ Markov process is a stochastic process that satisfies the Markov property. We ma
 * *Finite state space:* we denote the state space by $$\mathcal{S}=\{s_1,s_2,\dots,s_n\}$$, therefore, $$\vert\mathcal{S}\vert=n$$
 * *Stationary transition probabilities:* the transition probabilities are time independent. Mathematically, this means:
 
-$$P(S_1=s'\vert S_0=s)=P(S_t=s'\mid S_{t-1}=s)$$, $$\forall s, s'\in\mathcal{S}$$, $$\forall t=1, 2, \dots$$
+$$P(S_1=s'\vert S_0=s)=P(S_t=s'\mid S_{t-1}=s),\qquad\forall s, s'\in\mathcal{S},\qquad\forall t=1, 2, \dots$$
 
-These two additional assumptions lead to a nice characterization of the transition dynamics in terms of *transition probability matrix* $$\mathbb{P}$$ of size $$n\times n$$, whose $$(i,j)$$ entry is given by $$\mathbb{P}_{ij}=P(S_t=s_j\vertS_{t-1}=s_i)$$
+These two additional assumptions lead to a nice characterization of the transition dynamics in terms of *transition probability matrix* $$\mathbb{P}$$ of size $$n\times n$$, whose $$(i,j)$$ entry is given by $$\mathbb{P}_{ij}=P(S_t=s_j\vert S_{t-1}=s_i)$$
 
-this means:
-
-$$\alpha=1$$
 
 
 

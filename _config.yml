@@ -8,7 +8,7 @@ show_footer: true            # show the "previous" and "next" links at the end o
 dark_theme: false            # use the dark mode as default
 dark_header: true            # keep the header dark
 dark_footer: true            # keep the footer dark
-# katex: true
+mathjax: true
 # style: minimal             # use a simpler style inspired by the minima theme
 
 navigation:                  # site navigation in the header

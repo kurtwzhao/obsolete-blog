@@ -5,6 +5,8 @@ title:  "Dynamic Programming"
 > Abstract
 
 {: class="table-of-content"}
+* TOC
+{*toc}
 
 
 # Markov Decision Process (MDP)

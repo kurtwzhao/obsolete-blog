@@ -8,6 +8,8 @@ title:  "Dynamic Programming"
 
 
 # Markov Decision Process (MDP)
+
+$$\alpha=1$$
 It is natural to understand MDP by proceeding in the order of **Markov Process (MP)**, followed by **Markov Reward Process (MRP)**, and finally the **Markov Decision Process (MDP)**. 
 
 **Markov process** is a stochastic process that satisfies the Markov property. We make two additional assumptions that are very common in the reinforcement learning (RL) setting:
@@ -47,7 +49,6 @@ value iteration ==> Q-learning ==> DQN
 splitting $$I-\lambda P$$ as $$I-\lambda P = Q_d-R_d$$, then $$v^{n+1}=Q_d^{-1}(R_dv^n+r_d)$$:
 * Gauss-Seidel
 * Jacobi
-: ffdsa
 
 over-relaxation and inder-relaxation $$v^{n+1}=v^n+\omega\left[\max_{d\in D}\{Q_d^{-1}(R_dv^n+r_d)\}-v^n\right]$$
 

@@ -36,7 +36,7 @@ $$Q(s,a)=\sum_a\pi(a\vert s)\left[r(s,a)+\gamma\sum_{s'}P(s'\vert s, a)Q(s',a')\
 
 
 * One policy gradient step does not maximize the objective thoroughly. With improper learning rate, the policy gradient step may be harmful.
-
+## test
 
 ### Value function and action-value function (Q-function)
 
@@ -47,9 +47,9 @@ value iteration ==> Q-learning ==> DQN
 splitting $$I-\lambda P$$ as $$I-\lambda P = Q_d-R_d$$, then $$v^{n+1}=Q_d^{-1}(R_dv^n+r_d)$$:
 * Gauss-Seidel
 * Jacobi
+: ffdsa
 
-over-relaxation and inder-relaxation
-$v^{n+1}=v^n+\omega\left[\max_{d\in D}\{Q_d^{-1}(R_dv^n+r_d)\}-v^n\right]$
+over-relaxation and inder-relaxation $$v^{n+1}=v^n+\omega\left[\max_{d\in D}\{Q_d^{-1}(R_dv^n+r_d)\}-v^n\right]$$
 
 ### policy iteration and modified policy iteration
 

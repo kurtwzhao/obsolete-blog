@@ -6,7 +6,7 @@ title:  "Dynamic Programming"
 
 {: class="table-of-content"}
 * TOC
-{*toc}
+{:toc}
 
 
 # Markov Decision Process (MDP)
@@ -40,7 +40,9 @@ $$Q(s,a)=\sum_a\pi(a\vert s)\left[r(s,a)+\gamma\sum_{s'}P(s'\vert s, a)Q(s',a')\
 
 
 * One policy gradient step does not maximize the objective thoroughly. With improper learning rate, the policy gradient step may be harmful.
+
 ## test
+whether this is good
 
 ### Value function and action-value function (Q-function)
 

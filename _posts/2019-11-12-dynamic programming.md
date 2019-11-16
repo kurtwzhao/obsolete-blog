@@ -2,7 +2,7 @@
 title:  "Dynamic Programming"
 ---
 
-> Markov decision process is a convenient and formal environment for reinforcement learning and dynamic promming is the only general approach for solving this kind of problems, and even when it is computationally prohibitive, it can serve as the basis for more practical suboptimal approachs.
+> Markov decision process is a convenient and formal environment for reinforcement learning and dynamic promming is the only general approach for solving this kind of problems, and even when it is computationally prohibitive, it can serve as the basis for more practical suboptimal approaches.
 
 {: class="table-of-content"}
 * TOC
@@ -42,7 +42,15 @@ $$\begin{aligned}\mathbf{v}&=\mathbf{R}+\gamma\mathbf{PR}+\gamma^2\mathbf{P^2R}+
 
 This last equality comes from the *Neumann series*, it can be regarded as a matrix version of the *geometric series*. Similar to geometric series, it holds when $$\Vert\gamma\mathbf{P}\Vert<1$$, which is true. Since $$\mathbf{P}$$ is a transition matrix, so as $$\mathbf{P^t}$$, and each row of a transitin matrix sums to $$1$$. From the second equlity above one can tell that the summation of each row of the matrix $$(\mathbf{I}-\gamma\mathbf{P})^{-1}$$ equals $$\frac{1}{1-\gamma}$$. Hence the value function can be regraded as a weighted discounted summation of the rewards and the weight is the frequency the state appears.
 
-Another way to derive this 
+Another way to derive this result is using the recursive formula. The value function can be expressed recursively:
+
+$$v(s)=R(s)+\gamma\sum_{s'}P(s'\vert s)v(s')$$
+
+if written in the matrix form
+
+$$\mathbf{v}=\mathbf{R}+\gamma\mathbf{Pv}$$
+
+and we obtain the same result. Although we have the analytic solution for the value function, the computation of the inverse matrix is very expensive, which is $$\mathcal{O}(\vert\mathcal{S}\vert^3)$$. Usually an iterative algorithm is implemented. 
 
 
 ## Markov Decision Process

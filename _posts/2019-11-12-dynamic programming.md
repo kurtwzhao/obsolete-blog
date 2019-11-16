@@ -9,9 +9,9 @@ title:  "Dynamic Programming"
 {:toc}
 
 
-# Markov Decision Process (MDP)
+# Markov Decision Process
 
-It is natural to understand MDP by proceeding the definition in the order of **Markov Process (MP)**, followed by **Markov Reward Process (MRP)**, and finally the **Markov Decision Process (MDP)**. 
+It is natural to understand MDP by proceeding the definition in the order of **Markov Process**, followed by **Markov Reward Process**, and finally the **Markov Decision Process**. 
 
 ## Markov Process
 
@@ -26,14 +26,23 @@ These two additional assumptions leadto a nice characterization of the transitio
 
 ## Markov Reward Process
 
-A **Markov reward process** is defined as a tuple $$(\mathcal{S},\mathbf{P},\textcolor{red}{\mathscr{R}},\textcolor{red}{\gamma})$$, where $$\mathscr{R}$$ is a reward funcition that maps states to rewards, i.e. $$\mathscr{R}:S\to\mathbb{R}$$ and $$\gamma$$ is discount factor between $$0$$ and $$1$$. In Markov reward process, whenever a transition happens from a current state $$s$$ to a successor state $$s'$$, a reward is obtained depending on the current state $$s$$. The reward can be either deterministic or stochastic. If stochastic, tt can be a random variable or even depend on the successor state $$s'$$ and $$R_t(s)$$ is regraded as the expected reward conditioning on the current state $$s$$. The expectation takes on both the distribution of the random variable and the transition probability on the current state.
+A **Markov reward process** is defined as a tuple $$(\mathcal{S},\mathbf{P},\textcolor{red}{\mathscr{R}},\textcolor{red}{\gamma})$$, where $$\mathscr{R}$$ is a reward funcition that maps states to rewards, i.e. $$\mathscr{R}:S\to\mathbb{R}$$ and $$\gamma$$ is discount factor between $$0$$ and $$1$$. In Markov reward process, whenever a transition happens from a current state $$s$$ to a successor state $$s'$$, a reward is obtained depending on the current state $$s$$. The reward can be either deterministic or stochastic. If stochastic, tt can be a random variable or even depend on the successor state $$s'$$ and $$R(s)$$ is regraded as the expected reward conditioning on the current state $$s$$. The expectation takes on both the distribution of the random variable and the transition probability on the current state. We assume that the reward is also stationary, i.e. it is also a function of the current state and don't depend on time-step $$t$$.
 
-The return $$G_t$$ is the total discounted reward from time-step $$t$$.
+The return $$G_t$$ is the total discounted reward from time-step $$t$$:
 
 $$G_t\doteq R_{t+1}+\gamma R_{t+2}+\dots=\sum_{k=t+1}^\infty\gamma^{k-t-1}R_k$$
 
-The discount factor $$\gamma\in[0,1)$$
+The discount factor $$\gamma\in[0,1)$$ plays two roles: mathematically, it guarantees the return is finite; biologically, humans are impatient or face unvertainty in the future. I want to emphasis here that $$R_t$$ may not be the same as the real realization of the reward if it is stochastic. It is a prior expectation conditioning on the current state. Note that $$G_t$$ is a random variable and its value depends on the realization of the trajectory $$(s_t, s_{t+1},s_{t+2}, \dots)$$. Now we define the value function $$v(s)$$ as the expected return starting from state $$s$$:
 
+$$v(s)\doteq\mathbb{E}[G_t\vert S_t=s]$$
+
+Let $$\mathbf{R}$$ denote a vector of size $$\vert\mathcal{S}\vert\times1$$ whose $$i$$th elemet is $$R(s_i)$$ and $$\mathbf{v}$$ a vector of size $$\vert\mathcal{S}\vert\times1$$ whose $$i$$th elemet is $$v(s_i)$$. Then the value function can be expressed explicitly as:
+
+$$\begin{aligned}\mathbf{v}&=\mathbf{R}+\gamma\mathbf{PR}+\gamma^2\mathbf{P^2R}+\dots\\&=(\mathbf{I}+\gamma\mathbf{P}+\gamma^2\mathbf{P^2+\dots)\mathbf{R}}\\&=(\mathbf{I}-\gamma\mathbf{P})^{-1}\mathbf{R}\end{aligned}$$
+
+This last equality comes from the *Neumann series*, it can be regarded as a matrix version of the *geometric series*. Similar to geometric series, it holds when $$\Vert\gamma\mathbf{P}\Vert<1$$, which is true. Since $$\mathbf{P}$$ is a transition matrix, so as $$\mathbf{P^t}$$, and each row of a transitin matrix sums to $$1$$. From the second equlity above one can tell that the summation of each row of the matrix $$(\mathbf{I}-\gamma\mathbf{P})^{-1}$$ equals $$\frac{1}{1-\gamma}$$. Hence the value function can be regraded as a weighted discounted summation of the rewards and the weight is the frequency the state appears.
+
+Another way to derive this 
 
 
 ## Markov Decision Process

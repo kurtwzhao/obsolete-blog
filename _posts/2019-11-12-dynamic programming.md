@@ -59,9 +59,9 @@ A **Markov decision process** is defined as a tuple $$(\mathcal{S},\textcolor{re
 
 
 <div align="center">
-![Swiss Alps](/images/RL_illustration.png)
+![Swiss Alps]('/images/RL_illustration.png')
 </div>
-**Figure 1. An agent interacts aaa with the environment, trying to take smart actions to maximize cumulative rewards.**
+**Figure 1. An agent interacts bbb with the environment, trying to take smart actions to maximize cumulative rewards.**
 
 The element added to Markov decision process from Markov rewrd preocess is the action. Here we distinguish the open loop control and closed loop control and then introduce policy. In open loop control, the control action is independent of the process output or the environment feedback. That means you make a prior plan and take actions according to this plan regardless of how the environment changes. In closed loop control, the action can depend on the feedback of the environment. If the environment is deterministic, there is no difference between open loop control and closed loop control since a previous action determines the later environment deterministically. However, if the environment is stochastic, closed loop control is always better since it takes advantage of current information.
 

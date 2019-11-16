@@ -26,7 +26,7 @@ These two additional assumptions leadto a nice characterization of the transitio
 
 ## Markov Reward Process
 
-A **Markov reward process** is defined as a tuple $$(\mathcal{S},\mathbf{P},\textcolor{red}{\mathscr{R}},\textcolor{red}{\gamma})$$, where $$\mathscr{R}$$ is a reward funcition that maps states to rewards, i.e. $$\mathscr{R}:S\to\mathbb{R}$$ and $$\gamma$$ is discount factor between $$0$$ and $$1$$. In Markov reward process, whenever a transition happens from a current state $$s$$ to a successor state $$s'$$, a reward is obtained depending on the current state $$s$$. The reward can be either deterministic or stochastic. If stochastic, tt can be a random variable or even depend on the successor state $$s'$$ and $$R(s)$$ is regraded as the expected reward conditioning on the current state $$s$$. The expectation takes on both the distribution of the random variable and the transition probability on the current state. We assume that the reward is also stationary, i.e. it is also a function of the current state and don't depend on time-step $$t$$.
+A **Markov reward process** is defined as a tuple $$(\mathcal{S},\mathbf{P},\textcolor{red}{\mathscr{R}},\textcolor{red}{\gamma})$$, where $$\mathscr{R}$$ is a reward funcition that maps states to rewards, i.e. $$\mathscr{R}:\mathcal{S}\to\mathbb{R}$$ and $$\gamma$$ is discount factor between $$0$$ and $$1$$. In Markov reward process, whenever a transition happens from a current state $$s$$ to a successor state $$s'$$, a reward is obtained depending on the current state $$s$$. The reward can be either deterministic or stochastic. If stochastic, tt can be a random variable or even depend on the successor state $$s'$$ and $$R(s)$$ is regraded as the expected reward conditioning on the current state $$s$$. The expectation takes on both the distribution of the random variable and the transition probability on the current state. We assume that the reward is also stationary, i.e. it is also a function of the current state and don't depend on time-step $$t$$.
 
 The return $$G_t$$ is the total discounted reward from time-step $$t$$:
 
@@ -50,10 +50,11 @@ if written in the matrix form
 
 $$\mathbf{v}=\mathbf{R}+\gamma\mathbf{Pv}$$
 
-and we obtain the same result. Although we have the analytic solution for the value function, the computation of the inverse matrix is very expensive, which is $$\mathcal{O}(\vert\mathcal{S}\vert^3)$$. Usually an iterative algorithm is implemented. 
+and we obtain the same result. 
 
 
 ## Markov Decision Process
+A **Markov decision process** is defined as a tuple $$(\mathcal{S},\textcolor{red}{\mathcal{A}},\mathbf{P},\mathscr{R},\gamma)$$, where $$\mathcal{A}$$ is the action space. Compared with the Markov reward process, there are two main changes with respect to the action $$a$$. First, the reward function depend on not only the current state, but also the action, $$\mathscr{R}:\mathcal{S}\times\mathcal{A}\to\mathbb{R}$$. Second, the transition probability is also affected by the action, $$P(S_{t+1}=s'\vert S_t=s,A_t=a)$$. As that in the Markov reward process, the real reward can also depend on the next state $$s'$$, and we still define $$R(s,a)$$ as the expected reward conditioning on the current state $$s$$ and action $$a$$. $$P(s',r\vert s,a)$$, since taking expectation is a linear operator, these two kinds of definition are equivalent. The information in the joint distribution of $$(s',r)$$ is unnecessary and only the marginal distribution matters. [I'm curious about that if the return is not defined as the discounted summation of the reward but some other forms, say, the cumulative multiplication, the information in the joint distribution of $$(s',r)$$ can matter.]
 
 ## Three Tpyes of Markov Decision Process
 
@@ -69,6 +70,8 @@ $$V(s)=\max_a\enspace\sum_a\pi(a\vert s)\left[r(s,a)+\gamma\sum_{s'}P(s'\vert s,
 $$Q(s,a)=\sum_a\pi(a\vert s)\left[r(s,a)+\gamma\sum_{s'}P(s'\vert s, a)\max_{a'}Q(s',a')\right]$$
 
 ## Policy Iteration
+
+Although we have the analytic solution for the value function, the computation of the inverse matrix is very expensive, which is $$\mathcal{O}(\vert\mathcal{S}\vert^3)$$. Usually an iterative algorithm is implemented. 
 
 $$V(s)=\enspace\sum_a\pi(a\vert s)\left[r(s,a)+\gamma\sum_{s'}P(s'\vert s, a)V(s')\right]$$
 

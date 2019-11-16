@@ -59,9 +59,14 @@ A **Markov decision process** is defined as a tuple $$(\mathcal{S},\textcolor{re
 ![RL]({{"/images/RL_illustration.png" | relative_url}}){:height="60%" width="60%"}
 **Figure 1. An agent interacts with the environment, trying to take smart actions to maximize cumulative rewards.**
 
-The element added to Markov decision process from Markov rewrd preocess is the action. Here we distinguish the open loop control and closed loop control and then introduce policy. 
-aa
-Policy is a function  open loop and closed loop
+The element added to Markov decision process from Markov rewrd preocess is the action. Here we distinguish the open loop control and closed loop control and then introduce policy. In open loop control, the control action is independent of the process output or the environment feedback. That means you make a prior plan and take actions according to this plan regardless of how the environment changes. In closed loop control, the action can depend on the feedback of the environment. If the environment is deterministic, there is no difference between open loop control and closed loop control since a previous action determines the later environment deterministically. However, if the environment is stochastic, closed loop control is always better since it takes advantage of current information.
+
+A policy is a function from the state to 
+
+
+$$R(\pi)\doteq R(s,\pi(s))$$
+
+$$P(\pi)$$
 
 
 ## Three Tpyes of Markov Decision Process

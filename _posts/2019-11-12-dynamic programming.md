@@ -56,10 +56,13 @@ and we obtain the same result.
 ## Markov Decision Process
 A **Markov decision process** is defined as a tuple $$(\mathcal{S},\textcolor{red}{\mathcal{A}},\mathbf{P},\mathscr{R},\gamma)$$, where $$\mathcal{A}$$ is the action space. Compared with the Markov reward process, there are two main changes with respect to the action $$a$$. First, the reward function depend on not only the current state, but also the action, $$\mathscr{R}:\mathcal{S}\times\mathcal{A}\to\mathbb{R}$$. Second, the transition probability is also affected by the action, $$P(S_{t+1}=s'\vert S_t=s,A_t=a)$$. As that in the Markov reward process, the real reward can also depend on the next state $$s'$$, and we still define $$R(s,a)$$ as the expected reward conditioning on the current state $$s$$ and action $$a$$. The popular Sutton & Barto (2018) textbook defines the transition probability as the joint distribution $$P(s',r\vert s,a)$$, since taking expectation is a linear operator, these two kinds of definition are equivalent. The information in the joint distribution of $$(s',r)$$ is unnecessary and only the marginal distribution matters. [I'm curious about that if the return is not defined as the discounted summation of the reward but some other forms, say, the cumulative multiplication, the information in the joint distribution of $$(s',r)$$ can matter. Generally, $$\mathbb{E}[XY]\neq\mathbb{E}[X]\mathbb{E}[Y]$$.]
 
-<div style="align: center">
+<div align=center>
 ![Illustration of a reinforcement learning problem](/images/RL_illustration.png){:height="50%" width="50%"}
-**Figure 1. An agent interacts with the environment, trying to take smart actions to maximize cumulative rewards.**
 </div>
+**Figure 1. An agent interacts with the environment, trying to take smart actions to maximize cumulative rewards.**
+
+open loop and closed loop
+
 
 ## Three Tpyes of Markov Decision Process
 

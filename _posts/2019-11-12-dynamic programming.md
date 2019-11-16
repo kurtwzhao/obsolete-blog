@@ -59,7 +59,7 @@ A **Markov decision process** is defined as a tuple $$(\mathcal{S},\textcolor{re
 
 
 <div align="center">
-![Swiss Alps]("/images/RL_illustration.png")
+![Swiss Alps](/images/RL_illustration.png)
 </div>
 **Figure 1. An agent interacts with the environment, trying to take smart actions to maximize cumulative rewards.**
 

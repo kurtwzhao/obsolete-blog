@@ -15,7 +15,7 @@ It is natural to understand MDP by proceeding the definition in the order of **M
 
 ## Markov Process
 
-A **Markov process** is defined as a tuple $$(\mathcal{S},\mathbf{P})$$, where $$\mathcal{P}$$ is the state space and $$\mathbf{P}$$ is the transintion probability. We make two additional assumptions that are very common in the reinforcement learning (RL) setting:
+A **Markov process** is defined as a tuple $$(\mathcal{S},\mathbf{P})$$, where $$\mathcal{S}$$ is the state space and $$\mathbf{P}$$ is the transintion probability. We make two additional assumptions that are very common in the reinforcement learning (RL) setting:
 
 * *Finite state space:* we denote the state space by $$\mathcal{S}=\{s_1,s_2,\dots,s_n\}$$, therefore, $$\vert\mathcal{S}\vert<\infty$$
 * *Stationary transition probabilities:* the transition probabilities are time independent. Mathematically, this means:
@@ -26,7 +26,13 @@ These two additional assumptions leadto a nice characterization of the transitio
 
 ## Markov Reward Process
 
-A **Markov reward process** is defined as a tuple $$(\mathcal{S},\mathbf{P},\color{red}{\mathscr{R}},\color{red}{\gamma})$$, where $$\mathscr{R}$$ is a reward funcition that maps states to rewards, i.e. $$\mathscr{R}:S\to\mathbb{R}$$. $$\gamma$$ is discount factor between $$0$$ and $$1$$.
+A **Markov reward process** is defined as a tuple $$(\mathcal{S},\mathbf{P},\textcolor{red}{\mathscr{R}},\textcolor{red}{\gamma})$$, where $$\mathscr{R}$$ is a reward funcition that maps states to rewards, i.e. $$\mathscr{R}:S\to\mathbb{R}$$ and $$\gamma$$ is discount factor between $$0$$ and $$1$$. In Markov reward process, whenever a transition happens from a current state $$s$$ to a successor state $$s'$$, a reward is obtained depending on the current state $$s$$. The reward can be either deterministic or stochastic. If stochastic, tt can be a random variable or even depend on the successor state $$s'$$ and $$R_t(s)$$ is regraded as the expected reward conditioning on the current state $$s$$. The expectation takes on both the distribution of the random variable and the transition probability on the current state.
+
+The return $$G_t$$ is the total discounted reward from time-step $$t$$.
+
+$$G_t\doteq R_{t+1}+\gamma R_{t+2}+\dots=\sum_{k=t+1}^\infty\gamma^{k-t-1}R_k$$
+
+The discount factor $$\gamma\in[0,1)$$
 
 
 

@@ -1,8 +1,14 @@
 ---
-title:  "Dynamic Programming"
+title: "Markov Decision Process and Dynamic Programming"
+date: 2019-11-12
+permalink: /2019-11-12-mdp-dp/
 ---
 
-> Markov decision process is a convenient and formal environment for reinforcement learning and dynamic promming is the only general approach for solving this kind of problems, and even when it is computationally prohibitive, it can serve as the basis for more practical suboptimal approaches.
+{: class="table-of-content"}
+* TOC
+{:toc}
+
+> Markov decision process is a convenient and formal environment for reinforcement learning and dynamic promming is the only general approach for solving this kind of sequential problems, and even when it is computationally prohibitive, it can serve as the basis for more practical suboptimal approaches.
 
 
 
@@ -58,7 +64,7 @@ A **Markov decision process** is defined as a tuple $$(\mathcal{S},\textcolor{re
 </center>
 
 
-![pig](/images/alg1.png#pic_center){:height="50%" width="50%"}
+
 
 
 **Figure 1. An agent interacts with the environment, trying to take smart actions to maximize cumulative rewards.**
@@ -67,7 +73,7 @@ The element added to Markov decision process from Markov rewrd preocess is the a
 
 A policy is a function from the state to 
 
-<img src="/images/RL_illustration.png" width="50%" align=center>
+
 
 
 $$R(\pi)\doteq R(s,\pi(s))$$

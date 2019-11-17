@@ -58,8 +58,7 @@ A **Markov decision process** is defined as a tuple $$(\mathcal{S},\textcolor{re
 </center>
 
 
-![pig](/images/alg1.png#pic_center)
-
+![pig](/images/alg1.png#pic_center){:height="50%" width="50%"}
 
 
 **Figure 1. An agent interacts with the environment, trying to take smart actions to maximize cumulative rewards.**
@@ -68,6 +67,8 @@ The element added to Markov decision process from Markov rewrd preocess is the a
 
 A policy is a function from the state to 
 
+<img src="/images/RL_illustration.png" width="50%" align=center>
+
 
 $$R(\pi)\doteq R(s,\pi(s))$$
 
@@ -75,6 +76,8 @@ $$P(\pi)$$
 
 
 ## Three Tpyes of Markov Decision Process
+
+<img src="/images/RL_illustration.png" width="50%" align="center">
 
 ## Stationary Distribution and Discounted Stationary Distribution
 

@@ -10,7 +10,7 @@ permalink: /2019-11-26-communicate/
 
 
 # Preliminary
-The following analysis and examples all depend on the framework of game theory. When analyzing a game, we usually don't care about communication and hence the definiton of **Nash Equilibrium** is widely used. 
+The following analysis and examples all depend on the framework of game theory. When analyzing a game, we usually don't care about communication and hence the definiton of **Nash equilibrium** is widely used. Intuitively, a Nash equilibrium is a stable outcome (strategy profile) in which no agent would want to change his strategy if he knew what strategies the other agents were following. Note that here the strategy of each agent is independent and hence the outcome (strategy profile) can be expressed as the product of each agent's strategy. Just like that in probability, the joint distribution is the product of each marginal distribution if all component are independent. 
 
 In principle, we argued, anything that a player can do to communicate and coordinate with other players could be described by moves in an extensive-form game, so planning these communication moves would become part of his strategy choice itself. 
 Although this perspective can be fully general in principle, it is not necessarily the most fruitful way to think about all games
@@ -28,7 +28,7 @@ In general, games can be classified into three categories according to agents's 
 
 <div style="text-align:center">
 Game 1: Pure Cooperative Game
-<table class="table_tab responsive">
+<table width="40%">
     <tr>
         <td></td> 
         <td></td> 

@@ -12,7 +12,12 @@ The following analysis and examples all depend on the framework of game theory.
 ## Cooperation and Competition
 In general, games can be classified into three categories according to agents's disire of cooperation and competition:
 
-* **Pure Cooperative Games**, which is also called the **Common-payoff games**. In such games, each agent receives the same reward in the same outcome. 
+* **Pure Cooperative Games**, which is also called the **Common-payoff games**. In such games, each agent receives the same reward in the same outcome. Refer to the following Game 1 for a simple example.
+
+|        |Acrion 1|Action 2|
+|:------:|:------:|:------:|
+|Acrion 1| 1, 1 | 0, 0 |
+|Action 2| 0, 0 | 1, 1 |
 
 <div style="text-align:center">
 Game 1: Pure Cooperative Game
@@ -41,7 +46,7 @@ Game 1: Pure Cooperative Game
     </tr>
 </table>
 
-
+* **Pure Competitive Games**, which is also called the **Common-payoff games**. In such games, each agent receives the same reward in the same outcome. Refer to the following Game 1 for a simple example.
 
 # cooperate or coordinate
 

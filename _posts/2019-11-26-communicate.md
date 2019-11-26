@@ -12,16 +12,12 @@ The following analysis and examples all depend on the framework of game theory.
 ## Cooperation and Competition
 In general, games can be classified into three categories according to agents's disire of cooperation and competition:
 
-* **Pure Cooperative Games**, which is also called the **Common-payoff games**. In such games, each agent receives the same reward in the same outcome. Refer to the following Game 1 for a simple example.
+* **Pure Cooperative Games**, which is also called the **Constant-sum games**. Since a positive affine transmation doesn't change the agents' preference, this is also called **zero-sum games**. In such games, for each outcome, the summation of all agent's utility is zero. Refer to the following Game 1 for a simple example.
 
-|        |Acrion 1|Action 2|
-|:------:|:------:|:------:|
-|Acrion 1| 1, 1 | 0, 0 |
-|Action 2| 0, 0 | 1, 1 |
 
 <div style="text-align:center">
 Game 1: Pure Cooperative Game
-<table>
+<table border-collapse: collapse;>
     <tr>
         <td></td> 
         <td></td> 
